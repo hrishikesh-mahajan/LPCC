@@ -5,7 +5,9 @@
 ```sh
 lex LexFileName.l
 ```
+
 OR
+
 ```sh
 flex LexFileName.l
 ```
@@ -15,6 +17,7 @@ flex LexFileName.l
 ```sh
 gcc lex.yy.c -ll -o LexFileName
 ```
+
 > Use `-ll` to link `libf` library.
 
 ## Generate C Code from a YACC file
@@ -28,4 +31,5 @@ yacc -d YACCFileName.y
 ```sh
 gcc lex.yy.c y.tab.c -ll -o YACCFileName
 ```
+
 > Use `-ll` to link `libf` library.
