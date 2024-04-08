@@ -10,6 +10,6 @@
 ### Above combination will ignore all files without extension ###
 
 # Ignore all compilation files.
-*/lex.yy.c
-*/y.tab.c
-*/y.tab.h
+**/*lex.yy.c
+**/*y.tab.c
+**/*y.tab.h
