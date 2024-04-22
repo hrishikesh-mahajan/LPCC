@@ -47,15 +47,15 @@ ALAPointer = 0
 while entry < total_lines:
     line = tokenized_lines[entry]
     if line[0] == "MACRO":
-        print(line)
+        print(" ".join(line))
         MNT.append([line[1], MDTP])
         MDT.append(line)
         MDTP += 1
         ALA = prepALA(line[2:])
         ALAPointer += 1
-        print("ALA ", ALAPointer)
+        print("ALA", "\t", ALAPointer)
         for z in ALA:
-            print(z, ALA[z])
+            print(z, "\t", ALA[z])
         print()
         j = entry + 1
         line = tokenized_lines[j]
@@ -73,11 +73,11 @@ while entry < total_lines:
     else:
         entry += 1
 
+
 print("MNT")
+for macro, line in MNT:
+    print(macro, "\t", line)
 
-for entry in MNT:
-    print(entry)
 print("\nMDT")
-
-for entry in MDT:
-    print(entry)
+for line, entry in enumerate(MDT):
+    print(str(int(line + 1)) + ".\t " + " ".join(entry))
